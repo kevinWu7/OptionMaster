@@ -1,0 +1,10 @@
+当vscode安装了cmake和cmake_tools扩展时。
+只要在源代码目录(vscode_cmake_cpp)下，新增一个CMakeList.txt,
+当打开vscode_cmake_cpp目录时，cmake_tools扩展会自动加载CMakeList.txt
+并且vscode底部栏选择显示CMake_Tool(Extension)，可使用指数栏进行调试，编译等。
+
+当CMakeList.txt中添加add_executable语句时，CMake_Tool(Extension)底部栏会显示相关项目
+若有多条add_executable语句，则底部栏会有多个选项
+
+此种方式，无需添加.vscode(luanch.json和tasks.json)，即可直接编译调试cpp项目
+并且会在源代码目录(vscode_cmake_cpp)自动创建build文件夹

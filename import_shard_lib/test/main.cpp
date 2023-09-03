@@ -1,9 +1,12 @@
 #include <iostream>
-#include "sniper_sdk_api.h"
+#include "calc.h"
 
 int main()
 {
     std::cout<<"this is test app"<<std::endl;
-    start_client_export();
+    add_func(7,999);
+    reduce_func(34124,2);
+    std::string command="";
+    std::cin>>command;
     return 0;
 }

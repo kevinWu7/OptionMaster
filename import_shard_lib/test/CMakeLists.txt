@@ -10,10 +10,10 @@ link_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs)
 add_executable(${PROJECT_NAME} ${SRC_FILE})
 
 #链接SniperSDK这个第三方库
-target_link_libraries(${PROJECT_NAME} SniperSDK)
+target_link_libraries(${PROJECT_NAME} calc)
 
 #安装-将生成的目标输出到指定目录（包含可执行文件和库文件）
-install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/build/bin)
 
 file(GLOB DLL_FILES "${CMAKE_CURRENT_SOURCE_DIR}/libs/*.dll")
-install(FILES  ${DLL_FILES} DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+install(FILES  ${DLL_FILES} DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/build/bin)
